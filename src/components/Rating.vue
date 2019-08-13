@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <ul>
-      <li class="star active"><icon name="star" /></li>
-      <li class="star active"><icon name="star" /></li>
-      <li class="star active"><icon name="star" /></li>
-      <li class="star"><icon name="regular/star" /></li>
-      <li class="star"><icon name="regular/star" /></li>
+  <div class="rating">
+    <ul class="list">
+     <li :key="star" v-for="star in maxStars" :class="{ 'active': star <= stars }" @click="rate(star)" class="star">
+        <icon v-test="{ id: 'icon' }" scale="2" :name="star <= stars ? 'star' : 'regular/star'"/>
+      </li>
     </ul>
-    <span>3 of 5</span>
+    <span>{{ stars }} of {{ maxStars }}</span>
   </div>
 </template>
 
@@ -18,7 +16,18 @@
   import Icon from 'vue-awesome/components/Icon'
 
   export default {
-    components: { Icon }
+    components: { Icon },
+    data() {
+      return {
+        stars: 3,
+        maxStars: 5
+      }  
+    },
+    methods: {
+      rate(star) {
+        this.stars = star
+      }
+    }
   }
 </script>
 
