@@ -2,7 +2,7 @@
   <div class="rating">
     <ul class="list">
      <li :key="star" v-for="star in maxStars" :class="{ 'active': star <= stars }" @click="rate(star)" class="star">
-        <icon v-test="{ id: 'icon' }" scale="2" :name="star <= stars ? 'star' : 'regular/star'"/>
+        <icon scale="2" :name="star <= stars ? 'star' : 'regular/star'"/>
       </li>
     </ul>
     <span>{{ stars }} of {{ maxStars }}</span>
@@ -17,10 +17,10 @@
 
   export default {
     components: { Icon },
+    props: ['grade', 'maxStars', 'hasCounter'],
     data() {
       return {
-        stars: 3,
-        maxStars: 5
+        stars: this.grade
       }  
     },
     methods: {
