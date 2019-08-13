@@ -1,6 +1,12 @@
-# vue_demo
+# Vue demo
 
-> A Vue.js project
+A simple Vue mini project for learning purposes. Done after [this tutorial](https://frontstuff.io/build-your-first-vue-js-component) on [frontstuff.io](https://frontstuff.io)
+
+![image](https://user-images.githubusercontent.com/48257682/62949704-f90cbc80-bde6-11e9-8280-2afcc02d5e39.png)
+
+## Deployment
+
+Deployed [here]()
 
 ## Build Setup
 
@@ -15,4 +21,3 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
