@@ -1,13 +1,26 @@
 <template>
-  <ul>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-  </ul>
+  <div>
+    <ul>
+      <li><icon name="star" /></li>
+      <li><icon name="star" /></li>
+      <li><icon name="star" /></li>
+      <li><icon name="regular/star" /></li>
+      <li><icon name="regular/star" /></li>
+    </ul>
+    <span>3 of 5</span>
+  </div>
+
 </template>
 
 <script>
-  /* Your JS goes here */
+  import 'vue-awesome/icons/star'
+  import 'vue-awesome/icons/regular/star'
+
+  import Icon from 'vue-awesome/components/Icon'
+
+  export default {
+    components: { Icon }
+  }
 </script>
 
 <style>
