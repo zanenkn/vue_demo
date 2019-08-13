@@ -25,7 +25,9 @@
     },
     methods: {
       rate(star) {
-        this.stars = star
+        if (typeof star === 'number' && star <= this.maxStars && star >= 0) {
+          this.stars = this.stars === star ? star - 1 : star
+        }
       }
     }
   }
